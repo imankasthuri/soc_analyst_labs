@@ -15,7 +15,7 @@
 
  - This means sending server not authorized to send emails for the domain it claimed by using, so the sender identity is fake.
 
-##Content-Transfer-Encoding: base64##
+**Content-Transfer-Encoding: base64**
 
 - Another sighn of suspicious behaviour is the presense of base64 encoded content.
   
