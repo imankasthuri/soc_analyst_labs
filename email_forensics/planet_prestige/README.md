@@ -6,10 +6,18 @@
 
 - First I opened the raw email file with notepad ++ and quickly identified the spoofed sender information and the other suspicious content.
 
-<img src="https://github.com/ImanKasthuri/soc_analyst_labs/blob/main/email_forensics/planet_prestige/Screenshot%20(43).png?raw=true">
+**Received: from localhost (emkei.cz. [93.99.104.210])**
 
-- I found out that, localcost means this is not a real legitimate email server, attackers often used to localhost when sending fake emails.
-- 
+- I found out that localhost means this is not a real, legitimate email server; attackers often use localhost when sending fake emails.
+- And attacker used emkei.cz. fake email generator to generate the email.
+
+ **spf=fail** 
+
+ - This means sending server not authorized to send emails for the domain it claimed by using, so the sender identity is fake.
+
+##Content-Transfer-Encoding: base64##
+
+- Another sighn of suspicious behaviour is the presense of base64 encoded content.
   
 
 
