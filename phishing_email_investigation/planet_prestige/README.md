@@ -1,4 +1,4 @@
-# BTLO - The planet Prestige Challenge
+# BTLO - The Planet Prestige Challenge
 
 ## Overview
 - This write-up is about documenting the email that I investigated, and I found some suspicious information. I found out that there are some encoded texts with base64, and this email has a file pretending to be a PDF file. I used CyberShef to decode the text file and found out that it's a zip file, it has three files, which I don't know the filextensions. The following steps show how I did my investigation.
