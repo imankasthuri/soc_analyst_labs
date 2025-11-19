@@ -2,8 +2,7 @@
 
 ## Overview
 
-- This write-up documents my investigation of a suspicious email that showed multiple indicators of malicious activity. During the analysis, I discovered Base64-encoded data and an attachment that claimed to be a PDF but did not match standard PDF characteristics. After decoding the content with CyberChef, I determined that the file was actually a ZIP archive containing three files with misleading or missing extensions.
-This report outlines the tools, techniques, and findings from the investigation.
+- Today I took a challenge on BTLO - Planet Prestige, which is about investigating a malicious email. During the analysis, I found that the email contained a file that claimed to be a PDF file, but it did not meet the characteristics of a PDF file. I discovered that some of the texts were encoded with base64. I decoded the text with the help of CyberShef and found that the content was actually a ZIP file. I extracted the ZIP file on my computer and discovered that three of the files did not have a file extension. This report shows how I did my investigation from different tools and techniques.
   
 ## Tools Used
 
@@ -17,13 +16,13 @@ This report outlines the tools, techniques, and findings from the investigation.
 ## Email Analysis
 
 1. From: "Bill" <billjobs@microapple.com>
-- This sender address is not legitimate. The domain “MicroApple” is fake, and the attacker is attempting to impersonate a well-known company to appear credible.
+- This sender's address is not legitimate; the attacker used the well-known companies' domains to appear credible.
 2. spf=fail (google.com: domain of billjobs@microapple.com does not designate 93.99.104.210 as permitted sender)
-- Google flagged the message as unauthorized. It did not originate from a mail server authorized by the claimed domain, which is a strong indicator of email spoofing.
+- This indicates that the email came from a different server.
 3. Received: from localhost (emkei.cz. [93.99.104.210])
-- Emkei.cz is a known email spoofing service commonly used by attackers to send fraudulent or impersonated messages.
+-  emkei.cz is a fake email-generating website; SPF fails because the email came from emkei.cz instead of the real server.
 4. Reply-To: negeja3921@pashter.com
-- The reply-to address does not match the sender address. This mismatch often reveals the attacker’s actual inbox and is a clear sign of malicious intent.
+- The reply is going to a different address instead of the from address, which is suspicious, and this is the real email address that the attacker uses to send mail.
   
  <img src="https://github.com/ImanKasthuri/soc_analyst_labs/blob/main/phishing_email_investigation/planet_prestige/screenshots/Screenshot%201.png?raw=true">
  
