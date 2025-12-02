@@ -1,8 +1,14 @@
 # BTLO Bruteforce
 
 ## Overview
+This lab shows the RDP (Remote Desktop Protocol) brute-force attack against a Windows machine. Brute force attacks are when an attacker tries thousands of username/password combinations to break in. I used this analysis to find how many failed logins, source IP, origin country of the IP address, username, etc.
 
 ## Tools Used
+- PowerShell
+- Windows Event Viewer
+- Notepad
+- Notepad ++
+- IP Address Lookup
 
 ## How many Audit Failure events are there?
 I used PowerShell to gather Audit Failure events using this commands.
@@ -65,10 +71,11 @@ ForEach-Object {
 $ports | Measure-Object -Minimum -Maximum
 ```
 
+### Why we check the range?
 
-# Show lowest and highest port
-
-$ports | Measure-Object -Minimum -Maximum
+- Usually, if a normal user tries to log in, the port doesn't change; it stays the same, but if a bot tries multiple times, the port changes.
+- So if all the ports all closed together as like this lab 49162-65534, it's coming from a single attacker and the same machine.
+- It also helps to identify which operating system the attacker comes from. As I identified 49162-65534, these source ports are coming from a Windows Machine.
 
 
 
