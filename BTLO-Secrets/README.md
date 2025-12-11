@@ -3,8 +3,12 @@
 This lab helped me understand how JWT tokens work and how they can be misused if not configured properly. The challenge focused on how a security engineer should enforce least privilege when creating JSON Web Tokens. I also learned how to use Hashcat to brute-force a weak JWT secret and see how attackers can exploit poorly secured tokens.
 
 ## Tools Used
+
 CyberShef
+
 HashCat
+
+JWT.IO
 
 ### #1) Can you identify the name of the token?
 
