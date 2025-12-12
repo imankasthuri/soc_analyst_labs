@@ -72,6 +72,10 @@ I used JWT.io to generate a new JWT. For the challenge, I updated the payload an
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/460f9a8a-6edd-48ab-b8ea-3c8a326d3850" />
 
+## Conclusion
+
+Doing this lab helped me understand how JWT tokens are used in real applications and how small mistakes can lead to serious security problems. Seeing how a weak secret could be cracked and then used to change user privileges made the risk very clear. Creating a low-privilege token showed me why least privilege is so important and how these issues might appear in real incidents. Overall, this lab helped me feel more comfortable analyzing authentication problems from a security perspective.
+
 
 
 
