@@ -1,5 +1,10 @@
 # BTLO - The Planet Prestige Challenge
 
+## Senario
+
+<img width="1146" height="397" alt="image" src="https://github.com/user-attachments/assets/f60a44d5-9623-4bd8-9049-800daf664f53" />
+
+
 ## Overview
 
 - Today I completed the BTLO challenge Planet Prestige, which focuses on investigating a malicious email. During the analysis, I found that the email included a file that claimed to be a PDF, but it did not match the characteristics of a legitimate PDF file. I also discovered that some of the text within the email was encoded in Base64. After decoding it using CyberChef, I learned that the content was actually a ZIP file. When I extracted the ZIP file on my computer, I found that three of the files inside did not have a file extension. This report outlines the tools and techniques I used throughout my investigation and the steps I took to analyze the email and its attachments.
