@@ -3,6 +3,13 @@
 ## Overview
 This lab demonstrates an RDP (Remote Desktop Protocol) brute-force attack against a Windows machine. A brute-force attack occurs when an attacker attempts thousands of username and password combinations to gain access. In this analysis, I identified the number of failed login attempts, the source IP address, the country of origin, the username used, and other relevant details.
 
+## Scenario
+Can you analyze logs from an attempted RDP bruteforce attack?
+
+One of our system administrators identified a large number of Audit Failure events in the Windows Security Event log.
+
+There are a number of different ways to approach the analysis of these logs! Consider the suggested tools, but there are many others out there!
+
 ## Tools Used
 - PowerShell
 - Windows Event Viewer
