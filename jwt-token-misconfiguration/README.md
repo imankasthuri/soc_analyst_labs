@@ -10,9 +10,9 @@ This lab helped me understand how JWT tokens work and how they can be misused if
 
 ## Tools Used
 
-- CyberShef
+- CyberChef
 
-- HashCat
+- Hashcat
 
 - JWT.IO
 
